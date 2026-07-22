@@ -1,12 +1,12 @@
 :root {
-    --pine: #1c2e22;
-    --pine-deep: #142219;
-    --pine-soft: #365241;
+    --pine: #38527c;
+    --pine-deep: #27466e;
+    --pine-soft: #2f4060;
     --gold: #ffffff;
-    --gold-soft: #ddeb84;
+    --gold-soft: #ffe25e;
     --cream: #f8f4ea;
-    --ink: #26302a;
-    --moss: #5c6f5e;
+    --ink: #3e4f61;
+    --moss: #5c696f;
     --glass-fill: rgba(248, 244, 234, 0.46);
     --glass-fill-strong: rgba(248, 244, 234, 0.62);
     --glass-border: rgba(248, 244, 234, 0.55);
@@ -33,7 +33,7 @@ body {
 }
 
 .bg {
-    background-image: url('./bg.jpg');
+    background-image: url('./bg2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,7 +112,6 @@ a {
     border-radius: 12px 12px 0 0;
     object-fit: cover;
     display: block;
-    border: 1px solid var(--glass-border);
     border-bottom: none;
 }
 
@@ -201,11 +200,8 @@ a {
 }
 
 .skill-item:hover {
-    transform: translateY(-3px);
     background: var(--cream);
 }
-
-/* ============ Projects ============ */
 .section-title {
     font-size: 2.2rem;
     font-weight: 600;
@@ -230,7 +226,6 @@ a {
     background: var(--glass-fill);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -280,6 +275,7 @@ a {
     font-weight: 200;
     color: var(--ink);
     line-height: 1.6;
+    align-self: flex-start;
 }
 
 .project-card:hover {
@@ -310,7 +306,7 @@ a {
     padding: 22px 20px;
     color: var(--pine-deep);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-grow: 1;
 }
 
