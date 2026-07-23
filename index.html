@@ -24,40 +24,25 @@
 
 <body>
     <div class="bg"></div>
+
+    <nav class="topnav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
-        <section class="header" id="about">
-            <div class="header-content">
-                <h1 class="name">Hi! I'm Saanvi</h1>
-                <h2 class="title">Data Science &amp; Engineering Student</h2>
 
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/saanvi-kanodia/" aria-label="LinkedIn" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="mailto:saanvikanodia05@gmail.com" aria-label="Email" target="_blank"><i
-                            class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/saanvi-kanodia" aria-label="GitHub" target="_blank"><i
-                            class="fab fa-github"></i></a>
-                </div>
-
-                <p class="bio-text">
-                    I am a Computer Engineering and Data Science student with a strong focus on leveraging machine
-                    learning, data analytics, and digital image processing to uncover insights across various sectors.
-                </p>
-
-                <div class="hero-skills-icons" aria-label="Skills icons">
-                    <span class="skill-item"><i class="devicon-python-plain colored" title="Python"></i></span>
-                    <span class="skill-item"><i class="devicon-cplusplus-plain colored" title="C++"></i></span>
-                    <span class="skill-item"><i class="devicon-c-plain colored" title="C"></i></span>
-                    <span class="skill-item"><i class="devicon-matlab-plain colored" title="MATLAB"></i></span>
-                    <span class="skill-item"><i class="devicon-mysql-plain colored" title="SQL"></i></span>
-                    <span class="skill-item"><i class="devicon-figma-plain colored" title="Figma"></i></span>
-                    <span class="skill-item"><i class="devicon-pandas-plain colored" title="Pandas"></i></span>
-                    <span class="skill-item"><i class="devicon-jupyter-plain colored" title="Jupyter"></i></span>
-                </div>
-            </div>
-            <div class="header-image">
-                <img src="./saanvi photo.jpg" alt="Saanvi Kanodia">
-                <a href="Saanvi_Kanodia.pdf" class="resume-btn" target="_blank" download>Download Resume</a>
+        <section class="hero">
+            <h1 class="name">Hi! I'm Saanvi</h1>
+            <p> <h4>I'm a Computer Science student with a specialization in Data Science</h4></p>
+            <div class="hero-skills-icons" aria-label="Skills icons">
+                <span class="skill-item"><i class="devicon-python-plain colored" title="Python"></i></span>
+                <span class="skill-item"><i class="devicon-cplusplus-plain colored" title="C++"></i></span>
+                <span class="skill-item"><i class="devicon-matlab-plain colored" title="MATLAB"></i></span>
+                <span class="skill-item"><i class="devicon-mysql-plain colored" title="SQL"></i></span>
+                <span class="skill-item"><i class="devicon-figma-plain colored" title="Figma"></i></span>
+                <span class="skill-item"><i class="devicon-pandas-plain colored" title="Pandas"></i></span>
             </div>
         </section>
 
@@ -75,13 +60,14 @@
                             Employee Perspectives: A Management Analytics Study.</p>
                     </div>
                 </a>
-                
+
                 <div class="project-card text-card">
                     <div class="img-wrapper">
                         <img src="./wall_defect.jpeg" alt="Building Defect Classification">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Computer vision and machine learning for classifying building defects from wall
+                        <p class="project-description">Computer vision and machine learning for classifying building
+                            defects from wall
                             imagery.</p>
                         <div class="project-actions">
                             <a href="https://github.com/saanvi-kanodia/Building_defect_clasification" target="_blank"
@@ -90,24 +76,48 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <a href="https://brandagencyportfoliowebsite.my.canva.site/netflix-content-analysis/"
+                    class="project-card contain-image" target="_blank">
+                    <div class="img-wrapper">
+                        <img src="./netflix.png">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-description">Optimising Netflix Content Portfolio for Subscriber
+                            Growth and Retention.</p>
+                    </div>
+                </a>
+
+                <a href="Predicting_Marine_Microplastic.pdf" class="project-card contain-image" target="_blank">
+                    <div class="img-wrapper">
+                        <img src="./ML.png">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-description">Supervised Calibration and Spatial Prediction of
+                            Marine Microplastic Hotspots via Multi-Modal Fusion Networks: An Independant Research</p>
+                    </div>
+                </a>
+
                 <a href="https://github.com/saanvi-kanodia/B076_CC_AgenticAI" class="project-card" target="_blank">
                     <div class="img-wrapper">
                         <img src="./E-commerce Agent.png" alt="E-commerce Agent">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Agentic AI e-commerce assistant designed to automate tickets, orders, and
+                        <p class="project-description">Agentic AI e-commerce assistant designed to automate tickets,
+                            orders, and
                             customer service.</p>
                     </div>
                 </a>
-                
-                <a href="https://github.com/saanvi-kanodia/Advanced-Fitness-Tracking-App" class="project-card" target="_blank">
+
+                <a href="https://github.com/saanvi-kanodia/Advanced-Fitness-Tracking-App" class="project-card"
+                    target="_blank">
                     <div class="img-wrapper">
                         <img src="./fitness_app.jpeg" alt="Advanced-Fitness-Tracking-Appt">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">An AI-powered fitness tracking application that provides real-time exercise analysis with comprehensive form evaluation
-                        and anti-cheat detections.</p>
+                        <p class="project-description">An AI-powered fitness tracking application that provides
+                            real-time exercise analysis with comprehensive form evaluation
+                            and anti-cheat detections.</p>
                     </div>
                 </a>
 
@@ -116,11 +126,13 @@
                         <img src="./Holt's forecasting.jpg" alt="US House Value Forecast">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Time-series forecasting project for predicting US house values with a trend-based statistical model and a supporting report.</p>
+                        <p class="project-description">Time-series forecasting project for predicting US house values
+                            with a trend-based statistical model and a supporting report.</p>
                         <div class="project-actions">
                             <a href="https://github.com/saanvi-kanodia/House-Value-Prediction" target="_blank"
                                 rel="noopener noreferrer">GitHub Repo</a>
-                            <a href="./Holt's Trend Forecast.pdf" target="_blank" rel="noopener noreferrer">Read Report</a>
+                            <a href="./Holt's Trend Forecast.pdf" target="_blank" rel="noopener noreferrer">Read
+                                Report</a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +142,8 @@
                         <img src="./FMCG Business in India.jpg" alt="FMCG Dashboard">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Ratio-analysis report and dashboard exploring the performance of leading FMCG companies through financial comparisons.</p>
+                        <p class="project-description">Ratio-analysis report and dashboard exploring the performance of
+                            leading FMCG companies through financial comparisons.</p>
                     </div>
                 </a>
 
@@ -139,7 +152,8 @@
                         <img src="./Hypothesis testing.jpg" alt="Hypothesis Testing">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Statistical hypothesis-testing study on shark attack data, using exploratory analysis and significance tests.</p>
+                        <p class="project-description">Statistical hypothesis-testing study on shark attack data, using
+                            exploratory analysis and significance tests.</p>
                     </div>
                 </a>
 
@@ -148,16 +162,48 @@
                         <img src="./variance analysis (2).png" alt="Variance Analysis">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Interactive Variance Analysis Tool for comparing scenario differences and
+                        <p class="project-description">Interactive Variance Analysis Tool for comparing scenario
+                            differences and
                             highlighting key metric deviations.</p>
                     </div>
                 </a>
-                
+
             </div>
         </section>
+
+        <section class="about" id="about">
+            
+            <div class="about-content">
+                <div class="bio-text">
+                    <h2 class="section-title">About</h2>
+                    <br>
+                    Hi, I'm Saanvi.<p> Driven by
+                        curiosity and an interest in solutions that combine technical depth with real-world impact.
+                        I'm particularly interested in AI, data analytics.</p>
+
+                    <br>What motivates me is figuring out why things work and exploring different ways to solve the same
+                        problem. Whether I'm conducting research, experimenting with ML models, or analyzing real-world
+                        datasets, I enjoy diving beneath the surface to understand the bigger picture.</br>
+                </div>
+                <div class="header-image">
+                    <img src="./saanvi photo.jpg" alt="Saanvi Kanodia">
+                    <a href="Saanvi_Kanodia.pdf" class="resume-btn" target="_blank" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/saanvi-kanodia/" target="_blank"><i class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+                <a href="mailto:saanvikanodia05@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/saanvi-kanodia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </section>
+
     </div>
 
-    
     <footer>
         <p>&copy; 2026 Saanvi Kanodia. Built with curiosity and a lot of Iced tea.</p>
     </footer>
