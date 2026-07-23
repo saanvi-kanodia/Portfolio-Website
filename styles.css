@@ -1,6 +1,6 @@
 :root {
     --pine: #38527c;
-    --pine-deep: #2a4a7c;
+    --pine-deep: #1d3f62;
     --pine-soft: #2f4060;
     --gold: #f8f4ea;
     --gold-soft: #f9f7ec;
@@ -25,7 +25,7 @@ body {
 }
 
 .bg {
-    background-image: url('./bg2.jpg');
+    background-image: url('./bg3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,9 +90,9 @@ a {
 }
 
 .topnav a {
-    color: var(--pine-deep);
+    color: var(--cream);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: 'Geist', sans-serif;
     font-weight: 450;
     letter-spacing: 0.02em;
@@ -106,7 +106,8 @@ a {
 /* ============ Hero ============ */
 .hero {
     text-align: center;
-    padding: 125px 0 40px;
+    padding: 140px 40px;
+    padding-bottom: 70px;
 }
 
 .name {
@@ -131,7 +132,7 @@ a {
     width: 46px;
     height: 46px;
     font-size: 1.5rem;
-    background: var(--glass-fill-strong);
+    background: var(--cream);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -152,10 +153,19 @@ a {
     letter-spacing: -0.03em;
     color: var(--pine-deep);
 }
-
+.section-title2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 10px 0 36px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+    padding-bottom: 10px;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+}
 /* ============ Projects ============ */
 #projects {
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .projects-grid {
@@ -354,9 +364,14 @@ a {
 
 /* ============ Footer ============ */
 footer {
+    position:static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 28px 0;
     margin-top: 40px;
+    margin-bottom: 0px;
     background-color: var(--pine-deep);
     color: var(--cream);
     font-size: 0.9rem;
