@@ -41,7 +41,6 @@ body {
     position: fixed;
     inset: 0;
     z-index: -2;
-    /* bg.jpg's edges are --paper, so the orb blends into the page */
     background: var(--paper) url('./bg.jpg') 72% center / auto 125vh no-repeat;
 }
 
