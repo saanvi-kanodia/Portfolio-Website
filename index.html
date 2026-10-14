@@ -4,7 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saanvi - Data Scientist Portfolio</title>
+    <title>Saanvi Kanodia - Data Science Portfolio</title>
+    <meta name="description"
+        content="Saanvi Kanodia - Data Science student at MPSTME, NMIMS and former PwC Data Engineering intern. Projects in machine learning, agentic AI and analytics.">
+
+    <!-- Link previews (LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Saanvi Kanodia - Data Science Portfolio">
+    <meta property="og:description"
+        content="Data Science student at NMIMS, ex-PwC Data Engineering intern. ML, agentic AI and analytics projects.">
+    <meta property="og:url" content="https://portfolio-website-theta-lilac.vercel.app/">
+    <meta property="og:image" content="https://portfolio-website-theta-lilac.vercel.app/saanvi%20photo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d3f62'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23f8f4ea'%3ES%3C/text%3E%3C/svg%3E">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +30,6 @@
     <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Devicon for Tech Icons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -26,188 +37,375 @@
     <div class="bg"></div>
 
     <nav class="topnav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#top" class="brand">Saanvi Kanodia</a>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
-    <div class="container">
+    <div class="container" id="top">
 
         <section class="hero">
             <h1 class="name">Hi! I'm Saanvi</h1>
-            <br>
-            <p> <h4>I'm a Computer Science student with a specialization in Data Science</h4></p>
-            <div class="hero-skills-icons" aria-label="Skills icons">
-                <span class="skill-item"><i class="devicon-python-plain colored" title="Python"></i></span>
-                <span class="skill-item"><i class="devicon-cplusplus-plain colored" title="C++"></i></span>
-                <span class="skill-item"><i class="devicon-matlab-plain colored" title="MATLAB"></i></span>
-                <span class="skill-item"><i class="devicon-mysql-plain colored" title="SQL"></i></span>
-                <span class="skill-item"><i class="devicon-figma-plain colored" title="Figma"></i></span>
-                <span class="skill-item"><i class="devicon-pandas-plain colored" title="Pandas"></i></span>
+            <p class="tagline">Data Science &amp; Machine Learning &middot; Applied AI &amp; Research</p>
+            <p class="hero-sub">Data Science undergrad at MPSTME, NMIMS and former Data Engineering intern at PwC. I
+                build ML models, multi-agent GenAI pipelines and analytics on real-world data.</p>
+            <div class="hero-cta">
+                <a href="Saanvi_Kanodia_BTech.pdf" class="btn btn-primary" target="_blank"
+                    rel="noopener noreferrer"><i class="fas fa-file-arrow-down"></i> Resume</a>
+                <a href="#contact" class="btn btn-ghost">Get in touch</a>
             </div>
+            <ul class="skill-pills" aria-label="Skills">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>scikit-learn</li>
+                <li>PySpark</li>
+                <li>LangChain</li>
+                <li>LangGraph</li>
+                <li>AutoGen</li>
+                <li>Azure OpenAI</li>
+                <li>OpenCV</li>
+                <li>Power BI</li>
+                <li>Tableau</li>
+                <li>Databricks</li>
+            </ul>
         </section>
 
         <section id="projects">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title light">Projects</h2>
+
+            <div class="filters" role="group" aria-label="Filter projects">
+                <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter" data-filter="ml" aria-pressed="false">ML &amp; AI</button>
+                <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+                <button class="filter" data-filter="analytics" aria-pressed="false">Analytics</button>
+            </div>
+
             <div class="projects-grid">
 
-                <a href="./Rethinking Early-Career Attrition Through Managerial and Employee Perspectives.pdf"
-                    class="project-card contain-image" target="_blank">
-                    <div class="img-wrapper">
-                        <img src="./paper_img.png" alt="Management Analytics Study">
+                <article class="project-card featured contain-image" data-category="ml research">
+                    <div class="img-wrapper dark">
+                        <img src="./wall_defect.jpeg" alt="Wall defect images with segmentation masks and results"
+                            loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Rethinking Early-Career Attrition Through Managerial and
-                            Employee Perspectives: A Management Analytics Study.</p>
-                    </div>
-                </a>
-
-                <div class="project-card text-card">
-                    <div class="img-wrapper">
-                        <img src="./wall_defect.jpeg" alt="Building Defect Classification">
-                    </div>
-                    <div class="project-info">
-                        <p class="project-description">Computer vision and machine learning for classifying building
-                            defects from wall
-                            imagery.</p>
+                        <span class="project-type">Computer Vision &middot; Paper</span>
+                        <h3 class="project-title">Building Defect Classification</h3>
+                        <p class="project-description">Hybrid pipeline that combines a fine-tuned MobileNetV2 with
+                            HSV/CLAHE preprocessing and classical image features to detect damp, mould, cracks, spalling
+                            and peeling. Reached 89% test accuracy, against 79% for an XGBoost baseline.</p>
+                        <ul class="tags">
+                            <li>Python</li>
+                            <li>CNN</li>
+                            <li>MobileNetV2</li>
+                            <li>XGBoost</li>
+                        </ul>
                         <div class="project-actions">
                             <a href="https://github.com/saanvi-kanodia/Building_defect_clasification" target="_blank"
-                                rel="noopener noreferrer">GitHub Repo</a>
-                            <a href="./IVP_Paper.pdf" target="_blank" rel="noopener noreferrer">Read Paper</a>
+                                rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                            <a href="./IVP_Paper.pdf" target="_blank" rel="noopener noreferrer"><i
+                                    class="fas fa-file-lines"></i> Paper</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <a href="https://brandagencyportfoliowebsite.my.canva.site/netflix-content-analysis/"
-                    class="project-card contain-image" target="_blank">
+                <article class="project-card contain-image" data-category="ml research">
                     <div class="img-wrapper">
-                        <img src="./netflix.png">
+                        <img src="./ML.jpg" alt="Map of predicted marine microplastic hotspots" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Optimising Netflix Content Portfolio for Subscriber
-                            Growth and Retention.</p>
+                        <span class="project-type">Independent Research</span>
+                        <h3 class="project-title">Marine Microplastic Hotspots</h3>
+                        <p class="project-description">Graph Neural Network that fuses sparse NOAA field samples with
+                            ocean data to predict microplastic hotspots in new regions.</p>
+                        <ul class="tags">
+                            <li>GNN</li>
+                            <li>PyTorch</li>
+                            <li>Geospatial</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="./Predicting_Marine_Microplastic.pdf" target="_blank" rel="noopener noreferrer"><i
+                                    class="fas fa-file-lines"></i> Paper</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <a href="Predicting_Marine_Microplastic.pdf" class="project-card contain-image" target="_blank">
+                <article class="project-card contain-image" data-category="research analytics">
                     <div class="img-wrapper">
-                        <img src="./ML.png">
+                        <img src="./paper_img.png" alt="Survey chart of reasons for leaving a job" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Supervised Calibration and Spatial Prediction of
-                            Marine Microplastic Hotspots via Multi-Modal Fusion Networks: An Independant Research</p>
+                        <span class="project-type">Management Analytics &middot; Paper</span>
+                        <h3 class="project-title">Early-Career Attrition Study</h3>
+                        <p class="project-description">Mixed-methods study combining a 38-response employee survey with
+                            interviews of senior managers to explain why early-career employees leave.</p>
+                        <ul class="tags">
+                            <li>Survey design</li>
+                            <li>t-tests</li>
+                            <li>Python</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="./Rethinking Early-Career Attrition Through Managerial and Employee Perspectives.pdf"
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-lines"></i> Paper</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <a href="https://github.com/saanvi-kanodia/B076_CC_AgenticAI" class="project-card" target="_blank">
+                <article class="project-card featured contain-image" data-category="ml">
                     <div class="img-wrapper">
-                        <img src="./E-commerce Agent.png" alt="E-commerce Agent">
+                        <img src="./E-commerce Agent.png" alt="Architecture diagram of the agentic AI support system"
+                            loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Agentic AI e-commerce assistant designed to automate tickets,
-                            orders, and
-                            customer service.</p>
+                        <span class="project-type">Agentic AI</span>
+                        <h3 class="project-title">E-commerce Support Agents</h3>
+                        <p class="project-description">Hybrid ML and multi-agent system for e-commerce migration
+                            incidents. Investigator, Researcher, Analyst and Responder agents use clustering, semantic
+                            search and RAG, with confidence-based routing and human review.</p>
+                        <ul class="tags">
+                            <li>LangChain</li>
+                            <li>LangGraph</li>
+                            <li>RAG</li>
+                            <li>Streamlit</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/saanvi-kanodia/B076_CC_AgenticAI" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <a href="https://github.com/saanvi-kanodia/Advanced-Fitness-Tracking-App" class="project-card"
-                    target="_blank">
+                <article class="project-card contain-image" data-category="ml">
                     <div class="img-wrapper">
-                        <img src="./fitness_app.jpeg" alt="Advanced-Fitness-Tracking-Appt">
+                        <img src="./fitness_app.jpeg" alt="Technical approach of the fitness tracking app"
+                            loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">An AI-powered fitness tracking application that provides
-                            real-time exercise analysis with comprehensive form evaluation
-                            and anti-cheat detections.</p>
+                        <span class="project-type">Computer Vision &middot; App</span>
+                        <h3 class="project-title">AI Fitness Tracker</h3>
+                        <p class="project-description">Real-time exercise analysis that evaluates form and detects
+                            cheated reps.</p>
+                        <ul class="tags">
+                            <li>OpenCV</li>
+                            <li>MediaPipe</li>
+                            <li>React Native</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/saanvi-kanodia/Advanced-Fitness-Tracking-App" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <div class="project-card text-card">
+                <article class="project-card contain-image" data-category="analytics">
                     <div class="img-wrapper">
-                        <img src="./Holt's forecasting.jpg" alt="US House Value Forecast">
+                        <img src="./netflix.png" alt="Netflix content and market analysis" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Time-series forecasting project for predicting US house values
-                            with a trend-based statistical model and a supporting report.</p>
+                        <span class="project-type">Business Analytics</span>
+                        <h3 class="project-title">Netflix Content Strategy</h3>
+                        <p class="project-description">Analysis of Netflix's content portfolio to find what drives
+                            subscriber growth and retention.</p>
+                        <ul class="tags">
+                            <li>Market analysis</li>
+                            <li>Data visualisation</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://brandagencyportfoliowebsite.my.canva.site/netflix-content-analysis/"
+                                target="_blank" rel="noopener noreferrer"><i
+                                    class="fas fa-arrow-up-right-from-square"></i> Case study</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="analytics">
+                    <div class="img-wrapper">
+                        <img src="./Holt's forecasting.jpg" alt="Row of US houses" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Time Series</span>
+                        <h3 class="project-title">US House Value Forecast</h3>
+                        <p class="project-description">Forecasting US house values with Holt's linear trend model,
+                            with a report on the method and results.</p>
+                        <ul class="tags">
+                            <li>Holt's method</li>
+                            <li>Forecasting</li>
+                        </ul>
                         <div class="project-actions">
                             <a href="https://github.com/saanvi-kanodia/House-Value-Prediction" target="_blank"
-                                rel="noopener noreferrer">GitHub Repo</a>
-                            <a href="./Holt's Trend Forecast.pdf" target="_blank" rel="noopener noreferrer">Read
-                                Report</a>
+                                rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                            <a href="./Holt's Trend Forecast.pdf" target="_blank" rel="noopener noreferrer"><i
+                                    class="fas fa-file-lines"></i> Report</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <a href="./FMCG Top 4 - Analysis & Dashboard.pdf" class="project-card" target="_blank">
+                <article class="project-card" data-category="analytics">
                     <div class="img-wrapper">
-                        <img src="./FMCG Business in India.jpg" alt="FMCG Dashboard">
+                        <img src="./FMCG Business in India.jpg" alt="Logos of FMCG brands" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Ratio-analysis report and dashboard exploring the performance of
-                            leading FMCG companies through financial comparisons.</p>
+                        <span class="project-type">Financial Analytics</span>
+                        <h3 class="project-title">FMCG Ratio Analysis</h3>
+                        <p class="project-description">Liquidity, profitability and solvency comparison of India's top
+                            four FMCG companies, with an interactive dashboard.</p>
+                        <ul class="tags">
+                            <li>Power BI</li>
+                            <li>Excel</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="./FMCG Top 4 - Analysis & Dashboard.pdf" target="_blank"
+                                rel="noopener noreferrer"><i class="fas fa-file-lines"></i> Report</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <a href="./Hypothesis testing.pdf" class="project-card" target="_blank">
+                <article class="project-card" data-category="analytics">
                     <div class="img-wrapper">
-                        <img src="./Hypothesis testing.jpg" alt="Hypothesis Testing">
+                        <img src="./Hypothesis testing.jpg" alt="Shark emerging from the water" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Statistical hypothesis-testing study on shark attack data, using
-                            exploratory analysis and significance tests.</p>
+                        <span class="project-type">Statistics</span>
+                        <h3 class="project-title">Shark Attack Hypothesis Testing</h3>
+                        <p class="project-description">Exploratory analysis and significance tests on global shark
+                            attack data.</p>
+                        <ul class="tags">
+                            <li>Hypothesis testing</li>
+                            <li>EDA</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="./Hypothesis testing.pdf" target="_blank" rel="noopener noreferrer"><i
+                                    class="fas fa-file-lines"></i> Report</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <a href="https://accounts-variance-analysis.vercel.app/index.html" class="project-card" target="_blank">
+                <article class="project-card" data-category="analytics">
                     <div class="img-wrapper">
-                        <img src="./variance analysis (2).png" alt="Variance Analysis">
+                        <img src="./variance analysis (2).png" alt="Standard costing variance figures" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-description">Interactive Variance Analysis Tool for comparing scenario
-                            differences and
-                            highlighting key metric deviations.</p>
+                        <span class="project-type">Web Tool</span>
+                        <h3 class="project-title">Variance Analysis Tool</h3>
+                        <p class="project-description">Interactive tool that compares scenarios and highlights the key
+                            metric deviations.</p>
+                        <ul class="tags">
+                            <li>Cost accounting</li>
+                            <li>Interactive</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://accounts-variance-analysis.vercel.app/index.html" target="_blank"
+                                rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Live
+                                demo</a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title light">Experience</h2>
+            <div class="experience-list">
+                <article class="experience-card">
+                    <div class="experience-head">
+                        <h3>Data Engineering Intern <span>&middot; PwC</span></h3>
+                        <p class="experience-date">May 2025 &ndash; Aug 2025</p>
+                    </div>
+                    <ul>
+                        <li>Built a multi-agent GenAI pipeline with Azure OpenAI and AutoGen that turns unstructured
+                            PDFs into structured databases (OCR, JSON conversion, summarisation, SQLite ingestion),
+                            cutting manual effort by 70%.</li>
+                        <li>Benchmarked 5+ OCR models (GPT-4o, PaddleOCR, EasyOCR, Pytesseract) to pick the extraction
+                            strategy, improving text extraction accuracy by 25%.</li>
+                    </ul>
+                </article>
+                <article class="experience-card">
+                    <div class="experience-head">
+                        <h3>Project Management Intern <span>&middot; Concept Simplified</span></h3>
+                        <p class="experience-date">May 2024 &ndash; Sep 2024</p>
+                    </div>
+                    <ul>
+                        <li>Led a team of 10 interns running MHT-CET counselling for 600+ students.</li>
+                        <li>Created engineering content for the company's YouTube channel, helping grow it to 50k
+                            subscribers.</li>
+                    </ul>
+                </article>
+                <article class="experience-card">
+                    <div class="experience-head">
+                        <h3>Chairperson <span>&middot; ACM Student Chapter</span></h3>
+                        <p class="experience-date">Leadership</p>
+                    </div>
+                    <ul>
+                        <li>Chairperson of the Association for Computing Machinery (ACM) chapter at MPSTME.</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
         <section class="about" id="about">
-            
             <div class="about-content">
                 <div class="bio-text">
                     <h2 class="section-title">About</h2>
-                    <br>
-                    Hi, I'm Saanvi.<p> Driven by
-                        curiosity and an interest in solutions that combine technical depth with real-world impact.
-                        I'm particularly interested in AI, data analytics.</p>
-
-                    <br>What motivates me is figuring out why things work and exploring different ways to solve the same
-                        problem. Whether I'm conducting research, experimenting with ML models, or analyzing real-world
-                        datasets, I enjoy diving beneath the surface to understand the bigger picture.</br>
+                    <p>I'm a B.Tech Computer Science (Data Science) student at MPSTME, NMIMS in Mumbai. I'm most
+                        interested in AI and data analytics: building models and pipelines that hold up on real, messy
+                        data.</p>
+                    <p>At PwC I built a multi-agent system that turns scanned documents into structured data. Since
+                        then I've worked on computer vision, graph neural networks and agentic AI, and written up
+                        several of these projects as research papers.</p>
+                    <p>What motivates me is figuring out why things work and exploring different ways to solve the
+                        same problem. I'm open to data science, ML and AI opportunities.</p>
                 </div>
                 <div class="header-image">
                     <img src="./saanvi photo.jpg" alt="Saanvi Kanodia">
-                    <a href="Saanvi_Kanodia.pdf" class="resume-btn" target="_blank" download>Download Resume</a>
+                    <a href="Saanvi_Kanodia_BTech.pdf" class="resume-btn" target="_blank"
+                        rel="noopener noreferrer">Download Resume</a>
                 </div>
             </div>
         </section>
 
         <section class="contact" id="contact">
-            <h2 class="section-title2">Contact</h2>
+            <h2 class="section-title light">Contact</h2>
+            <p class="contact-text">The best way to reach me is email:
+                <a href="mailto:saanvi.kanodia05@gmail.com">saanvi.kanodia05@gmail.com</a>
+            </p>
             <div class="contact-buttons">
-                <a href="https://www.linkedin.com/in/saanvi-kanodia/" target="_blank"><i class="fab fa-linkedin"></i>
-                    LinkedIn</a>
-                <a href="mailto:saanvikanodia05@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/saanvi-kanodia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/saanvi-kanodia/" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:saanvi.kanodia05@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/saanvi-kanodia" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i> GitHub</a>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Saanvi Kanodia. Built with curiosity and a lot of Iced tea.</p>
+        <p>&copy; 2026 Saanvi Kanodia. Built with curiosity and a lot of iced tea.</p>
     </footer>
+
+    <script>
+        const filters = document.querySelectorAll('.filter');
+        const grid = document.querySelector('.projects-grid');
+        const cards = document.querySelectorAll('.project-card');
+
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const f = btn.dataset.filter;
+                filters.forEach(b => {
+                    b.classList.toggle('is-active', b === btn);
+                    b.setAttribute('aria-pressed', b === btn);
+                });
+                grid.classList.toggle('is-filtered', f !== 'all');
+                cards.forEach(card => {
+                    card.hidden = f !== 'all' && !card.dataset.category.split(' ').includes(f);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
