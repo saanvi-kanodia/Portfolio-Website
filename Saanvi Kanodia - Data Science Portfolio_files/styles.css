@@ -1,0 +1,906 @@
+:root {
+    --page: #e7e4dd;
+    --slide: #f8f3e6;
+    --card: #fffdf7;
+    --ink: #1e1d1b;
+    --ink-soft: #625d55;
+    --line: rgba(30, 29, 27, 0.1);
+
+    /* Accent blocks, as in the reference deck */
+    --blue: #3a7bc8;
+    --green: #57a64a;
+    --mustard: #e3b04b;
+    --sky: #ffffff;
+    --pink: #e58db2;
+    --tomato: #e0563b;
+
+    --sans: 'Jost', 'Futura', 'Helvetica Neue', Arial, sans-serif;
+    --serif: 'Playfair Display', Georgia, serif;
+    --nav-h: 68px;
+    --slide-shadow: 0 22px 44px -18px rgba(40, 34, 24, 0.28), 0 3px 10px rgba(40, 34, 24, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: calc(var(--nav-h) + 24px);
+}
+
+body {
+    color: var(--ink);
+    background: var(--page);
+    font-family: var(--sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+a {
+    color: var(--ink);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Small uppercase tracked labels used throughout */
+.caps-label,
+.nav-links a,
+.side-rail a,
+.btn,
+.filter,
+.project-type,
+.project-actions a,
+.experience-date,
+.resume-btn,
+.contact-buttons a {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* ============ Nav ============ */
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-h);
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 0 48px;
+    background: rgba(231, 228, 221, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.brand svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--ink);
+    transition: transform 0.4s ease;
+}
+
+.brand:hover svg {
+    transform: rotate(180deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
+
+.nav-links a,
+.side-rail a {
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.side-rail a:hover {
+    color: var(--ink);
+}
+
+.nav-cta {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+    background: var(--ink);
+    color: var(--slide);
+}
+
+.btn-solid {
+    background: var(--ink);
+    color: var(--slide);
+}
+
+.btn-solid:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+/* ============ Side rail ============ */
+.side-rail {
+    position: fixed;
+    left: 18px;
+    bottom: 40px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.side-rail a {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 0.66rem;
+}
+
+/* ============ Deck of slides ============ */
+.deck {
+    padding: calc(var(--nav-h) + 40px) 56px 20px;
+}
+
+.slide {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 56px;
+    padding: 64px 72px;
+    background: var(--slide);
+    border-radius: 2px;
+    box-shadow: var(--slide-shadow);
+}
+
+/* Little colour blocks pinned to slide corners */
+.color-bar,
+.color-block {
+    position: absolute;
+    display: block;
+}
+
+.color-bar {
+    top: 26px;
+    left: 26px;
+    width: 120px;
+    height: 14px;
+}
+
+.color-block {
+    width: 26px;
+    height: 26px;
+}
+
+.bar-green { background: var(--green); }
+.block-blue { background: var(--blue); }
+.block-sky { background: var(--sky); top: 30px; right: 30px; }
+.block-mustard { background: var(--mustard); right: 32px; bottom: 32px; width: 22px; height: 16px; }
+
+.caps-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+/* ============ Title slide ============ */
+.slide-title {
+    display: grid;
+    grid-template-columns: 1fr auto 44px;
+    align-items: center;
+    gap: 64px;
+    min-height: min(calc(100vh - var(--nav-h) - 80px), 760px);
+}
+
+.title-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.title-intro {
+    max-width: 420px;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+}
+
+.title-now {
+    margin-top: 10px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+
+.title-art {
+    display: block;
+    height: min(560px, calc(100vh - var(--nav-h) - 220px));
+    min-height: 380px;
+    width: auto;
+}
+
+.title-name {
+    font-size: clamp(2.8rem, 6vw, 5.4rem);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Short rule between the name and the intro */
+.title-rule {
+    display: block;
+    width: 48px;
+    height: 2px;
+    margin: 34px 0 26px;
+    background: var(--ink);
+}
+
+.title-right {
+    /* Same height as the art, so the block lines up with its bottom edge */
+    height: min(560px, calc(100vh - var(--nav-h) - 220px));
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.title-right .color-block {
+    position: static;
+    width: 40px;
+    height: 28px;
+}
+
+/* ============ Part headers ============ */
+.part-head {
+    display: flex;
+    align-items: flex-end;
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.part-num {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+}
+
+.part-num span {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-right: 4px;
+}
+
+.serif-title {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.part-sub {
+    max-width: 440px;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+/* ============ Projects ============ */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.filter {
+    padding: 8px 16px;
+    border: 1px solid rgba(30, 29, 27, 0.25);
+    border-radius: 2px;
+    background: transparent;
+    color: var(--ink);
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter:hover {
+    border-color: var(--ink);
+}
+
+.filter.is-active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--slide);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 6px 16px -8px rgba(40, 34, 24, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card[hidden] {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 32px -14px rgba(40, 34, 24, 0.3);
+}
+
+/* Featured cards span two columns with the image beside the text */
+.projects-grid:not(.is-filtered) .project-card.featured {
+    grid-column: span 2;
+    flex-direction: row;
+}
+
+.projects-grid:not(.is-filtered) .featured .img-wrapper {
+    width: 55%;
+    height: auto;
+    min-height: 300px;
+    border-bottom: none;
+    border-right: 1px solid var(--line);
+    flex-shrink: 0;
+}
+
+.img-wrapper {
+    height: 190px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+}
+
+.img-wrapper.dark {
+    background: #1b1d2e;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card.contain-image img {
+    object-fit: contain;
+    padding: 15px;
+}
+
+.project-info {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex-grow: 1;
+}
+
+.project-type {
+    font-size: 0.66rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+.project-title {
+    font-family: var(--serif);
+    font-size: 1.28rem;
+    line-height: 1.2;
+}
+
+.project-description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tags li {
+    padding: 2px 8px;
+    border-radius: 2px;
+    background: rgba(30, 29, 27, 0.05);
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 6px;
+}
+
+.project-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: 2px;
+    background: var(--ink);
+    color: var(--slide);
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.project-actions a:hover {
+    background: var(--blue);
+}
+
+/* ============ Experience ============ */
+/* The orchid fills the slide behind everything at low opacity, so it shows
+   in the padding around the solid card */
+#experience {
+    overflow: hidden;
+}
+
+#experience::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('./orchid.jpg') center 40% / cover no-repeat;
+    opacity: 0.22;
+}
+
+#experience > * {
+    position: relative;
+}
+
+#experience > .color-block {
+    position: absolute;
+}
+
+.experience-list {
+    padding: 4px 34px;
+    background: var(--slide);
+    border-radius: 2px;
+    box-shadow: 0 14px 34px -16px rgba(40, 34, 24, 0.3);
+}
+
+.experience-card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 12px 40px;
+    padding: 28px 0;
+}
+
+.experience-card + .experience-card {
+    border-top: 1px solid var(--line);
+}
+
+.experience-head h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+}
+
+.experience-head h3 span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.experience-date {
+    margin-top: 10px;
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+}
+
+.experience-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+}
+
+.experience-card li {
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Small blue squares as bullets, echoing the colour blocks */
+.experience-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    background: var(--blue);
+}
+
+/* ============ Split slides (About, Contact) ============ */
+.slide-split {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    padding: 0;
+    overflow: hidden;
+}
+
+.split-text {
+    position: relative;
+    padding: 64px 64px 72px;
+}
+
+.split-image {
+    position: relative;
+    min-height: 520px;
+}
+
+.header-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40% 65%;
+}
+
+.resume-btn {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    padding: 12px 20px;
+    border-radius: 2px;
+    background: var(--slide);
+    color: var(--ink);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.resume-btn:hover {
+    background: var(--ink);
+    color: var(--slide);
+}
+
+.bio-text {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+}
+
+.bio-text p + p {
+    margin-top: 14px;
+}
+
+/* Stats sit in a row between the bio and the toolkit */
+.about-stats {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+}
+
+.about-stats dt {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.about-stats div:nth-child(1) dt { color: var(--tomato); }
+.about-stats div:nth-child(2) dt { color: var(--blue); }
+.about-stats div:nth-child(3) dt { color: var(--green); }
+
+.about-stats dd {
+    max-width: 150px;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--ink-soft);
+}
+
+.toolkit-label {
+    margin: 30px 0 12px;
+    font-size: 0.72rem;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-pills li {
+    padding: 4px 10px;
+    border: 1px solid rgba(30, 29, 27, 0.18);
+    border-radius: 2px;
+    font-size: 0.82rem;
+}
+
+.slide-contact {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.contact-art {
+    background: url('./orchid.jpg') center 35% / cover no-repeat;
+    min-height: 440px;
+}
+
+.contact-text {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 26px;
+}
+
+.contact-text a {
+    color: var(--ink);
+    font-weight: 500;
+    text-decoration-color: var(--blue);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 22px;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-buttons a:hover {
+    background: var(--ink);
+    color: var(--slide);
+}
+
+/* ============ Footer ============ */
+footer {
+    text-align: center;
+    padding: 30px 16px 34px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+}
+
+footer .credit {
+    margin-top: 4px;
+    font-size: 0.72rem;
+    opacity: 0.75;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 1100px) {
+    .slide-title {
+        gap: 44px;
+    }
+
+    .slide {
+        padding: 56px 52px;
+    }
+
+    .slide-split {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid:not(.is-filtered) .project-card.featured {
+        flex-direction: column;
+    }
+
+    .projects-grid:not(.is-filtered) .featured .img-wrapper {
+        width: 100%;
+        min-height: 0;
+        height: 240px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+
+    /* Title slide stacks: art and name first, then the details */
+    .slide-title {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .title-right {
+        display: none;
+    }
+
+    .title-art {
+        height: auto;
+        min-height: 0;
+        width: min(380px, 100%);
+        justify-self: center;
+    }
+
+    .slide-split,
+    .slide-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .split-image {
+        min-height: 380px;
+    }
+
+    .contact-art {
+        min-height: 240px;
+    }
+
+    .experience-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --nav-h: 58px;
+    }
+
+    .side-rail,
+    .nav-cta {
+        display: none;
+    }
+
+    .topnav {
+        padding: 0 16px;
+        gap: 0;
+    }
+
+    .nav-links {
+        flex: 1;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+    }
+
+    .deck {
+        padding: calc(var(--nav-h) + 20px) 12px 10px;
+    }
+
+    .slide {
+        margin-bottom: 28px;
+        padding: 40px 22px;
+    }
+
+    .slide-split {
+        padding: 0;
+    }
+
+    .split-text {
+        padding: 36px 22px 48px;
+    }
+
+    .title-art {
+        width: min(280px, 80%);
+    }
+
+    .part-head {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .part-num {
+        font-size: 3.6rem;
+    }
+
+    .experience-list {
+        padding: 4px 20px;
+    }
+
+    .color-bar {
+        top: 16px;
+        left: 22px;
+        width: 70px;
+        height: 8px;
+    }
+
+    .block-sky {
+        top: 18px;
+        right: 18px;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid:not(.is-filtered) .project-card.featured {
+        grid-column: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
