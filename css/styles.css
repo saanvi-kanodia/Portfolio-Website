@@ -510,7 +510,7 @@ ul {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('./orchid.jpg') center 40% / cover no-repeat;
+    background: url('../assets/images/orchid.jpg') center 40% / cover no-repeat;
     opacity: 0.22;
 }
 
@@ -691,7 +691,7 @@ ul {
 }
 
 .contact-art {
-    background: url('./orchid.jpg') center 35% / cover no-repeat;
+    background: url('../assets/images/orchid.jpg') center 35% / cover no-repeat;
     min-height: 440px;
 }
 
