@@ -904,3 +904,24 @@ footer .credit {
         scroll-behavior: auto;
     }
 }
+
+.experience-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 8 / 3;
+    object-fit: cover;
+    object-position: center top;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+}
+
+.experience-card.has-photo ul {
+    grid-column: 1;
+}
+
+@media (max-width: 1000px) {
+    .experience-photo { grid-column: 1; grid-row: auto; }
+}
