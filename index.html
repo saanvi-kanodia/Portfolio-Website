@@ -68,12 +68,17 @@
                 <p class="title-intro">Data Science undergrad at MPSTME, NMIMS and former Data Engineering intern at PwC.
                     I build ML models, multi-agent GenAI pipelines and analytics on real-world data.</p>
                 <p class="title-now">Currently a Software Engineering Intern at SecureBima.</p>
+                <details class="project-index">
+                    <summary>Browse <span class="project-count"></span> projects</summary>
+                    <nav aria-label="Project index">
+                        <ol></ol>
+                    </nav>
+                </details>
             </div>
 
             <img class="title-art" src="./assets/images/orchid.jpg" alt="Geometric illustration of a pink orchid">
 
             <div class="title-right">
-                <p class="vertical-text">Open to data &amp; AI roles</p>
                 <span class="color-block block-blue" aria-hidden="true"></span>
             </div>
         </section>
@@ -173,8 +178,8 @@
                 </article>
 
                 <article class="project-card featured contain-image" data-category="ml">
-                    <div class="img-wrapper">
-                        <img src="./assets/images/ecommerce-agent.png" alt="Architecture diagram of the agentic AI support system"
+                    <div class="img-wrapper" style="background: #f8f3e6;">
+                        <img src="./assets/images/ecommerce-agent.png" alt="Flow of the agentic support system: tickets are classified and clustered, four agents diagnose them, and replies are sent automatically or routed to human review"
                             loading="lazy">
                     </div>
                     <div class="project-info">
@@ -472,6 +477,24 @@
         const filters = document.querySelectorAll('.filter');
         const grid = document.querySelector('.projects-grid');
         const cards = document.querySelectorAll('.project-card');
+
+        // Build the clickable project index from the card titles
+        const indexList = document.querySelector('.project-index ol');
+        document.querySelector('.project-count').textContent = cards.length;
+        cards.forEach((card, i) => {
+            const title = card.querySelector('.project-title').textContent.trim();
+            card.id = 'project-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + card.id;
+            a.innerHTML = '<span>' + String(i + 1).padStart(2, '0') + '</span>';
+            a.append(title);
+            a.addEventListener('click', () => {
+                if (card.hidden) document.querySelector('.filter[data-filter="all"]').click();
+            });
+            li.append(a);
+            indexList.append(li);
+        });
 
         filters.forEach(btn => {
             btn.addEventListener('click', () => {
